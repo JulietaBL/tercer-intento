@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav .menu{
+    grid-area: nav;
+}
+
+section .fondo{
+    grid-area: fondo;
+}
+
+section .instrucciones{
+    grid-area: instrucciones;
+}
+
+footer .footer{
+    grid-area: footer;
+}
+
+body{
+    font-family: 'Italiana', serif;
+    
+}
+
+ul {
+    font-size:0 /* truco por el uso de inline-block*/
+    
+}
+
+li {
+    display: inline-block;
+    width: 20%;
+    position:relative;
+    font-size: 20px
+    
+}
+
+ul ul {
+    position: absolute;
+    display: none;
+   
+}
+
+ul ul li {
+    display: block;
+   
+}
+
+ul li:hover ul {
+    display:block;
+    
+}
+ 
+.boxModel{
+    display: inline-block;
+}
+
+.menu{
+    background-color: aliceblue;
+    padding: 30px 10px 80px 450px;
+    text-decoration: none;
+    
+}
+
+.margenesTitulo{
+    text-align: right ;
+    padding: 130px 150px 150px 500px;
+    font-size: 90px;
+    color: aliceblue;
+}
+
+.fondo{
+    background-image: url(../Media/plano.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+}
+
+#div1, #div2, #div3{ 
+    width: 300px ;
+    height: 300px;
+    padding: 22px 22px 22px 22px;
+}
+
+.instrucciones{
+    background-color: rgba(28, 63, 71, 0.555);
+    width: auto;
+    height: 250px;
+    padding: 350px 40px 30px 40px;
+    text-align: center;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: 33% 33% 33% ;
+    background-color: aliceblue;
+    width: auto;
+    height: 150px;
+    /*display: inline-block;*/
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: black;
+}
+
+#div7{
+    /*display: flex;*/
+    background-color: rgb(161, 180, 180);
+    padding: 30px 50px 30px 50px ;
+}
+
+.footer1{
+    display: inline-block;
+    /*width: 200px;
+    height: 200px;*/
+    margin: 30px 100px 50px 100px ;
+}
+
+#div6{
+    /*display: flex;
+    /*display: block;*/
+    padding-left: 100px;
+}
+
+
+/*.foto{
+    display: inline;
+}*/
+
+.proyecto{
+    display: inline-block;
+    background-color: rgba(28, 63, 71);
+    margin-right: 800px;
+    color: aliceblue;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    
+}
+
+.titulo{
+    font-size: 100px;
+}
+
+.textop{
+    font-size: 25px ;
+}
+
+#imagenp{
+    background-image: url(../Media/Vista\ 3D\ 1.jpg);
+    padding-left: 500px;
+    /*position: absolute;*/
+    
+}
+
+.ponerlosAlineados{
+    display: inline;
+}
+
+.consultas{
+    font-size: 45px ;
+   text-align: center;
+   margin-bottom: 50px;
+  
+}
+
+.formulario1{
+    text-align: center;
+    background-color:  rgba(28, 63, 71);
+    height: 500px;
+    color: aliceblue;
+    font-size: x-large;
+    padding-top: 100px;
+}
+
+.enviar{
+    padding: 6px 10px 6px 10px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-family: 'Italiana', serif;
+    
+}
+
+#hombre, #mujer, #pro, #tel{
+    margin-bottom: 20px;
+}
+
+input{
+    font-family: 'Italiana', serif;
+}
+
+#grid{
+    display: grid;
+    grid-template-columns: 50% 33% 33% ;
+    grid-template-rows: 15% 30% auto 15%;
+    grid-template-areas: "nav nav nav" "section section section" "section section section" "footer footer footer";
+}
+
+/* ACERCA DE MI */
+
+.fondoAcerca{
+    display: grid;
+    background-image: url(../Media/bajo-nivel-longchamps.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+#tituloAcerca{
+    font-size: 90px;
+    color: aliceblue;
+    text-align: left;
+}
+
+#tituloAcerca{
+    grid-area: tituloAcerca;
+}
+
+#texto1{
+    grid-area: texto1;
+    color: rgb(3, 45, 54);
+    margin: 50px;
+    margin-right: 600px;
+    text-align: left;
+    font-size: 25px;
+}
+
+.sectiontexto{
+    display: grid;
+    grid-area: sectiontexto;
+    height: 500px;
+    background-color: rgb(161, 180, 180);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: "texto1 texto1" "foto2 texto1";
+}
+
+#div4{
+    background-color: rgb(161, 180, 180);
+    padding: 30px 50px 30px 50px ;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 1200px){
+    footer{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "div4 div4 div4" "div5 div5 div5" "div6 div6 div6";
+        grid-template-rows: 150px;
+        /*margin-top: 10%;*/   
+        height: 10%; 
+        font-size: 20px;
+    }
+}
